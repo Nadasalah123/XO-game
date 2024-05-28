@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>XO Game</title>
+  <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+  <div class="game-start">
+    <div class="input-field">
+      <input type="text" id="playerChoice" placeholder="Enter X or O">
+      <button onclick="startGame()">Start Game</button>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="signs">
+      <div class="x-sign" draggable="true" ondragstart="drag(event)" >X</div>
+      <div class="x-sign" draggable="true" ondragstart="drag(event)" >X</div>
+      <div class="x-sign" draggable="true" ondragstart="drag(event)" >X</div>
+    </div>
+    <div class="game-board">
+      <div class="box" data-row="0" data-col="0" ondrop="drop(event)" ondragover="allowDrop(event)" ></div>
+      <div class="box" data-row="0" data-col="1" ondrop="drop(event)" ondragover="allowDrop(event)" ></div>
+      <div class="box" data-row="0" data-col="2" ondrop="drop(event)" ondragover="allowDrop(event)" ></div>
+      <div class="box" data-row="1" data-col="0" ondrop="drop(event)" ondragover="allowDrop(event)" ></div>
+      <div class="box" data-row="1" data-col="1" ondrop="drop(event)" ondragover="allowDrop(event)" ></div>
+      <div class="box" data-row="1" data-col="2" ondrop="drop(event)" ondragover="allowDrop(event)" ></div>
+      <div class="box" data-row="2" data-col="0" ondrop="drop(event)" ondragover="allowDrop(event)" ></div>
+      <div class="box" data-row="2" data-col="1" ondrop="drop(event)" ondragover="allowDrop(event)" ></div>
+      <div class="box" data-row="2" data-col="2" ondrop="drop(event)" ondragover="allowDrop(event)" ></div>
+    </div>
+    <div class="signs">
+      <div class="o-sign" draggable="true" ondragstart="drag(event)" >O</div>
+      <div class="o-sign" draggable="true" ondragstart="drag(event)" >O</div>
+      <div class="o-sign" draggable="true" ondragstart="drag(event)" >O</div>
+    </div>
+  </div>
+
+  <p class="winner_para">the winner is : </p>
+  <div class="winner" id="winner"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>

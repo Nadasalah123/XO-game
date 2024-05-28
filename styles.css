@@ -1,0 +1,93 @@
+body{
+  background-color:lightslategray;
+}
+
+.container {
+    display: flex;            /*display the content in a flex container */
+    justify-content: center;  /*center the content horizontally */
+    align-items: center;      /*center the content vertically */
+    
+    width: 100vw;
+    height: 100vh;
+    
+  }
+  
+  .game-board {
+    display: grid;                            /*display the content in a grid */
+    grid-template-columns: repeat(3, 100px);  /*create 3 columns with 100px width */
+    grid-template-rows: repeat(3, 100px);     /*create 3 rows with 100px height */
+    gap: 5px;                                 /*gap between the columns and rows */
+  }
+  
+  .box {
+    border: 2px solid #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    cursor: pointer;
+  }
+  
+  .x-sign {
+    width: 50px;
+    height: 50px;
+    background-color: red;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+  }
+  
+  .o-sign {
+    width: 50px;
+    height: 50px;
+    background-color: green;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+  }
+  
+
+  .game-start {
+    display: flex;
+    flex-direction: column;     /*to make the game start in a column*/
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .input-field {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+  }
+  
+  input[type="text"] {
+    padding: 5px;
+    font-size: 1em;
+    margin-right: 10px;
+  }
+  
+  button {
+    padding: 5px 10px;
+    font-size: 1em;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #45a049;
+  }
+
+  .winner_para {
+    margin-top: 20px;
+    font-size: 24px;
+    font-weight: bold;
+  }
+  .winner {
+    margin-top: 20px;
+    font-size: 24px;
+    font-weight: bold;
+  }
